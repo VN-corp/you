@@ -227,26 +227,22 @@
 
 
   <div class="card">
-    <span class="big-heart">💗</span>
+    <span class="big-heart">😗</span>
 
-    <p class="msg-main">Tao cũng thik m lâu rồi ý,<br>m đồng ý nha!!!</p>
+    <p class="msg-main">M có thik tao hok?</p>
 
     <div class="divider"></div>
 
     <button class="btn" id="confirmBtn" onclick="handleConfirm()">
-      Xác nhận 💖
+      có
+    </button>
+
+    <button class="btn" id="confirmBtno" onclick="handleConfirm()">
+      hok!
     </button>
 
     <p class="msg-confirm" id="msgConfirm">M thuộc về tao r đs nha 🫨</p>
-  </div>
-
-  <!-- ─── Popup ngủ ngon ─── -->
-  <div class="popup-overlay" id="popupOverlay">
-    <div class="popup-box">
-      <span class="popup-moon">😘</span>
-      <p class="popup-text">pé iu của ah<br>ngủ ngon nhe ❤️</p>
-      <button class="popup-close" onclick="closePopup()">Dạ ah iu❤️</button>
-    </div>
+    <p class="msg-confirmno" id="msgConfirmno">Huhuhu 😡, dỗi ko chơi với mày nữa😫</p>
   </div>
 
   <script type="module">
@@ -267,6 +263,7 @@
       try {
         await addDoc(collection(db, "love_confirm"), {
           status: "xac_nhan_yeu",
+          yes: "true",
           time:   serverTimestamp(),
           device: navigator.userAgent
         });
